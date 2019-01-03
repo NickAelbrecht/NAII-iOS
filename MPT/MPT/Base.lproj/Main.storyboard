@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LoG-gO-DtW">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="b2B-pt-tHA">
+            <objects>
+                <viewController id="XzF-hb-wsK" customClass="HomeViewController" customModule="MPT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kqz-oj-LRP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mpt" translatesAutoresizingMaskIntoConstraints="NO" id="Kc6-tA-Cg6">
+                                <rect key="frame" x="16" y="64" width="382" height="293.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycG-7e-5sB">
+                                <rect key="frame" x="20" y="407.5" width="374" height="81.5"/>
+                                <string key="text">Welkom bij Mergan personal training! In deze app kan je een overzicht krijgen van verschillende oefeningen per spiergroep, met bijhorende uitleg.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zbn-Lt-KCC">
+                                <rect key="frame" x="65" y="650" width="284" height="84"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GdS-dx-QD4">
+                                        <rect key="frame" x="0.0" y="0.0" width="284" height="37"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook_icon" translatesAutoresizingMaskIntoConstraints="NO" id="uN2-ug-AJ7">
+                                                <rect key="frame" x="0.0" y="0.0" width="37" height="37"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="37" id="MFV-Lv-KjX"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNr-Ph-Zuz">
+                                                <rect key="frame" x="37" y="0.0" width="247" height="37"/>
+                                                <state key="normal" title="Mergan Personal Training">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hjQ-wS-ij1">
+                                        <rect key="frame" x="0.0" y="47" width="284" height="37"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instagram_icon" translatesAutoresizingMaskIntoConstraints="NO" id="XkA-9k-CAZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="37" height="37"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="37" id="BUK-2z-dUa"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ps-UM-7PK">
+                                                <rect key="frame" x="37" y="0.0" width="247" height="37"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="mpt_mergan_personal_training">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moest je nog vragen hebben kan je me hier vinden:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxm-Pd-psP">
+                                <rect key="frame" x="20" y="509" width="374" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                        <constraints>
+                            <constraint firstItem="J9z-ik-nsp" firstAttribute="trailing" secondItem="zbn-Lt-KCC" secondAttribute="trailing" constant="65" id="1ZI-Ch-OfG"/>
+                            <constraint firstItem="zbn-Lt-KCC" firstAttribute="leading" secondItem="J9z-ik-nsp" secondAttribute="leading" constant="65" id="C9M-vc-lWy"/>
+                            <constraint firstItem="J9z-ik-nsp" firstAttribute="trailing" secondItem="Kc6-tA-Cg6" secondAttribute="trailing" constant="16" id="EKx-oE-ANr"/>
+                            <constraint firstItem="J9z-ik-nsp" firstAttribute="trailing" secondItem="cxm-Pd-psP" secondAttribute="trailing" constant="20" id="N7w-nr-iJd"/>
+                            <constraint firstItem="cxm-Pd-psP" firstAttribute="top" secondItem="ycG-7e-5sB" secondAttribute="bottom" constant="20" id="ODl-pl-x6Q"/>
+                            <constraint firstItem="zbn-Lt-KCC" firstAttribute="top" secondItem="cxm-Pd-psP" secondAttribute="bottom" constant="100" id="Q2g-xW-3DR"/>
+                            <constraint firstItem="ycG-7e-5sB" firstAttribute="top" secondItem="Kc6-tA-Cg6" secondAttribute="bottom" constant="50" id="ZIT-l4-y6C"/>
+                            <constraint firstItem="Kc6-tA-Cg6" firstAttribute="centerX" secondItem="Kqz-oj-LRP" secondAttribute="centerX" id="ZJk-eq-xQY"/>
+                            <constraint firstItem="ycG-7e-5sB" firstAttribute="leading" secondItem="J9z-ik-nsp" secondAttribute="leading" constant="20" id="ggu-bc-OGP"/>
+                            <constraint firstAttribute="trailing" secondItem="ycG-7e-5sB" secondAttribute="trailing" constant="20" id="lcw-aZ-AUE"/>
+                            <constraint firstItem="cxm-Pd-psP" firstAttribute="leading" secondItem="J9z-ik-nsp" secondAttribute="leading" constant="20" id="mTR-Cz-wnI"/>
+                            <constraint firstItem="Kc6-tA-Cg6" firstAttribute="top" secondItem="J9z-ik-nsp" secondAttribute="top" constant="20" id="qR8-oQ-2kn"/>
+                            <constraint firstItem="ycG-7e-5sB" firstAttribute="centerY" secondItem="Kqz-oj-LRP" secondAttribute="centerY" id="r8c-0B-K2K"/>
+                            <constraint firstItem="Kc6-tA-Cg6" firstAttribute="leading" secondItem="J9z-ik-nsp" secondAttribute="leading" constant="16" id="t0g-0D-2gt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="J9z-ik-nsp"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" id="xG5-ge-xGC"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="quN-J2-5KZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="253.59999999999999" y="-304.4977511244378"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ftn-5b-pMo">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="LoG-gO-DtW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NdL-jh-rnF">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="XzF-hb-wsK" kind="relationship" relationship="viewControllers" id="5O5-l7-gDp"/>
+                        <segue destination="aMa-GI-Xwv" kind="relationship" relationship="viewControllers" id="8qu-25-igA"/>
+                        <segue destination="J6W-4G-ZTg" kind="relationship" relationship="viewControllers" id="EbX-SS-mLA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J5l-py-oZ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-409" y="-304"/>
+        </scene>
+        <!--Spieren-->
+        <scene sceneID="wlf-VC-gr4">
+            <objects>
+                <viewController id="aMa-GI-Xwv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zf9-DN-X7E">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.060060865079999998" green="0.083264608320000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="HVz-mq-fGQ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Spieren" id="zn4-8j-wNg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l7j-bv-tdW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-410" y="364"/>
+        </scene>
+        <!--Profiel-->
+        <scene sceneID="XDT-6d-WAE">
+            <objects>
+                <viewController id="J6W-4G-ZTg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pJ2-lA-HZM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.57585520430000003" blue="0.1054019645" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="vBO-r1-eOe"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profiel" id="I7m-uU-23O"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PlN-XH-yIK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="254" y="364"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="facebook_icon" width="37.5" height="37.5"/>
+        <image name="instagram_icon" width="37.5" height="37.5"/>
+        <image name="mpt" width="368" height="368"/>
+    </resources>
+</document>
