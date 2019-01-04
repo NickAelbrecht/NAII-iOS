@@ -124,7 +124,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="XzF-hb-wsK" kind="relationship" relationship="viewControllers" id="5O5-l7-gDp"/>
-                        <segue destination="aMa-GI-Xwv" kind="relationship" relationship="viewControllers" id="8qu-25-igA"/>
+                        <segue destination="1tP-fH-TZ5" kind="relationship" relationship="viewControllers" id="8qu-25-igA"/>
                         <segue destination="J6W-4G-ZTg" kind="relationship" relationship="viewControllers" id="EbX-SS-mLA"/>
                     </connections>
                 </tabBarController>
@@ -135,18 +135,62 @@
         <!--Spieren-->
         <scene sceneID="wlf-VC-gr4">
             <objects>
-                <viewController id="aMa-GI-Xwv" sceneMemberID="viewController">
+                <viewController id="aMa-GI-Xwv" customClass="SpierViewController" customModule="MPT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zf9-DN-X7E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.060060865079999998" green="0.083264608320000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Wq6-7E-KYa">
+                                <rect key="frame" x="0.0" y="88" width="405" height="725"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="q7v-Go-eHa">
+                                    <size key="itemSize" width="180" height="180"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="7Zt-AS-BwI" customClass="CollectionViewCell" customModule="MPT" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Gz-qA-Cuu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="141"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvg-WG-0Lf">
+                                                    <rect key="frame" x="20" y="149" width="140" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <size key="customSize" width="180" height="180"/>
+                                        <connections>
+                                            <outlet property="spierAfbeelding" destination="4Gz-qA-Cuu" id="wI7-uW-MuI"/>
+                                            <outlet property="spierLabel" destination="cvg-WG-0Lf" id="ibo-Ik-j1j"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="HVz-mq-fGQ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Spieren" id="zn4-8j-wNg"/>
+                    <navigationItem key="navigationItem" title="Spieren" id="zEC-MP-JxI"/>
+                    <connections>
+                        <outlet property="spierenCollectionView" destination="Wq6-7E-KYa" id="GJm-Ea-boW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l7j-bv-tdW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-410" y="364"/>
+            <point key="canvasLocation" x="500.00000000000006" y="363.61607142857139"/>
         </scene>
         <!--Profiel-->
         <scene sceneID="XDT-6d-WAE">
@@ -162,7 +206,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PlN-XH-yIK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="254" y="364"/>
+            <point key="canvasLocation" x="1163.768115942029" y="363.61607142857139"/>
+        </scene>
+        <!--Spieren-->
+        <scene sceneID="TGc-hQ-aNk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1tP-fH-TZ5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Spieren" id="zn4-8j-wNg"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YpO-S1-tPj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aMa-GI-Xwv" kind="relationship" relationship="rootViewController" id="KsA-ip-lTr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lrp-bJ-30D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-410.14492753623193" y="363.61607142857139"/>
         </scene>
     </scenes>
     <resources>
