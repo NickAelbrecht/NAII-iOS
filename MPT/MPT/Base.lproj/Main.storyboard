@@ -42,9 +42,13 @@
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNr-Ph-Zuz">
                                                 <rect key="frame" x="37" y="0.0" width="247" height="37"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <state key="normal" title="Mergan Personal Training">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="fbButtonKlik:" destination="XzF-hb-wsK" eventType="touchUpInside" id="CoL-uF-0ld"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -59,10 +63,13 @@
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ps-UM-7PK">
                                                 <rect key="frame" x="37" y="0.0" width="247" height="37"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <state key="normal" title="mpt_mergan_personal_training">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="instaButtonKlik:" destination="XzF-hb-wsK" eventType="touchUpInside" id="6qL-W4-tPd"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -96,6 +103,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="xG5-ge-xGC"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="fbImage" destination="uN2-ug-AJ7" id="JgM-Sk-rMt"/>
+                        <outlet property="instaImage" destination="XkA-9k-CAZ" id="eBa-Rn-ffE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="quN-J2-5KZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
