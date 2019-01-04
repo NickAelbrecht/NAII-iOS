@@ -10,6 +10,7 @@ import UIKit
 
 class SpierViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     let spieren = ["Borst", "Rug", "Bicep","Tricep", "Schouder", "Buik", "Quadriceps", "Hamstring","Kuit","Alle"]
+    
     let afbeeldingen:[UIImage] = [
         UIImage(named: "borst")!,
         UIImage(named: "rug")!,
@@ -28,6 +29,7 @@ class SpierViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Deze klasse toewijzen als bron van data en ook dat deze het proces 'delegeert'
         spierenCollectionView.dataSource = self
         spierenCollectionView.delegate = self
 
@@ -41,6 +43,7 @@ class SpierViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        //voor elk item van de array het label en image aanpassen
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
         cell.spierLabel.text = spieren[indexPath.item]
         cell.spierAfbeelding.image = afbeeldingen[indexPath.item]

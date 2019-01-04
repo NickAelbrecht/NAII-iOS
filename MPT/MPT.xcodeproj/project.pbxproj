@@ -10,6 +10,9 @@
 		0146635221DE0EB000ED28F5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146635121DE0EB000ED28F5 /* HomeViewController.swift */; };
 		019BBBD121DFA49700C2B050 /* SpierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BBBD021DFA49700C2B050 /* SpierViewController.swift */; };
 		019BBBD321DFABA600C2B050 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BBBD221DFABA600C2B050 /* CollectionViewCell.swift */; };
+		019BBBD521DFE8ED00C2B050 /* OefeningenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BBBD421DFE8ED00C2B050 /* OefeningenCollectionViewCell.swift */; };
+		019BBBD921DFE96100C2B050 /* OefeningenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BBBD821DFE96100C2B050 /* OefeningenViewController.swift */; };
+		019BBBDB21DFEBC900C2B050 /* Oefening.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BBBDA21DFEBC900C2B050 /* Oefening.swift */; };
 		01C0B86E21D3968700826292 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C0B86D21D3968700826292 /* AppDelegate.swift */; };
 		01C0B87321D3968700826292 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C0B87121D3968700826292 /* Main.storyboard */; };
 		01C0B87521D3968800826292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01C0B87421D3968800826292 /* Assets.xcassets */; };
@@ -39,6 +42,9 @@
 		0146635121DE0EB000ED28F5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		019BBBD021DFA49700C2B050 /* SpierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpierViewController.swift; sourceTree = "<group>"; };
 		019BBBD221DFABA600C2B050 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		019BBBD421DFE8ED00C2B050 /* OefeningenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OefeningenCollectionViewCell.swift; sourceTree = "<group>"; };
+		019BBBD821DFE96100C2B050 /* OefeningenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OefeningenViewController.swift; sourceTree = "<group>"; };
+		019BBBDA21DFEBC900C2B050 /* Oefening.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oefening.swift; sourceTree = "<group>"; };
 		01C0B86A21D3968700826292 /* MPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01C0B86D21D3968700826292 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01C0B87221D3968700826292 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -84,6 +90,8 @@
 				0146635121DE0EB000ED28F5 /* HomeViewController.swift */,
 				019BBBD021DFA49700C2B050 /* SpierViewController.swift */,
 				019BBBD221DFABA600C2B050 /* CollectionViewCell.swift */,
+				019BBBD421DFE8ED00C2B050 /* OefeningenCollectionViewCell.swift */,
+				019BBBD821DFE96100C2B050 /* OefeningenViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -91,6 +99,7 @@
 		019BBBCF21DFA1C500C2B050 /* Domein */ = {
 			isa = PBXGroup;
 			children = (
+				019BBBDA21DFEBC900C2B050 /* Oefening.swift */,
 			);
 			path = Domein;
 			sourceTree = "<group>";
@@ -278,10 +287,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				019BBBD921DFE96100C2B050 /* OefeningenViewController.swift in Sources */,
 				01C0B86E21D3968700826292 /* AppDelegate.swift in Sources */,
 				019BBBD121DFA49700C2B050 /* SpierViewController.swift in Sources */,
 				019BBBD321DFABA600C2B050 /* CollectionViewCell.swift in Sources */,
+				019BBBD521DFE8ED00C2B050 /* OefeningenCollectionViewCell.swift in Sources */,
 				0146635221DE0EB000ED28F5 /* HomeViewController.swift in Sources */,
+				019BBBDB21DFEBC900C2B050 /* Oefening.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
