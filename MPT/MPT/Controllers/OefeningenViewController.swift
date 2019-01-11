@@ -11,12 +11,17 @@ import UIKit
 class OefeningenViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
         var oefeningen = [Oefening]()
+        var categorie:String = ""
     
+    
+    @IBOutlet weak var navigatieTitel: UINavigationItem!
     
     @IBOutlet weak var oefeningenCollectieView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("categorienaam: " + categorie)
+      self.navigationItem.title = categorie
         
         if let opgeslagenOefeningen = Oefening.laadOefeningenVanDisk(){
             oefeningen = opgeslagenOefeningen

@@ -51,6 +51,17 @@ class SpierViewController: UIViewController, UICollectionViewDelegate, UICollect
         return cell
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {        
+        let nav = segue.destination as! UINavigationController        
+        if (segue.identifier == "naarOefeningen") {
+            let oefeningenViewController = nav.viewControllers[1] as! OefeningenViewController
+            var categorie = ""
+            let cell = sender as! CollectionViewCell
+            categorie = cell.spierLabel.text!
+            oefeningenViewController.categorie = categorie
+        }
+    }
 
     /*
     // MARK: - Navigation

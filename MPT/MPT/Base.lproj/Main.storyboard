@@ -175,7 +175,7 @@
                                         <connections>
                                             <outlet property="spierAfbeelding" destination="4Gz-qA-Cuu" id="wI7-uW-MuI"/>
                                             <outlet property="spierLabel" destination="cvg-WG-0Lf" id="ibo-Ik-j1j"/>
-                                            <segue destination="gfO-NB-3aJ" kind="presentation" id="arH-X4-C2g"/>
+                                            <segue destination="inF-1d-Wue" kind="presentation" id="Jhx-eB-AoI"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -191,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l7j-bv-tdW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="500.00000000000006" y="363.61607142857139"/>
+            <point key="canvasLocation" x="252" y="408"/>
         </scene>
         <!--Profiel-->
         <scene sceneID="XDT-6d-WAE">
@@ -226,9 +226,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lrp-bJ-30D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-410.14492753623193" y="363.61607142857139"/>
+            <point key="canvasLocation" x="-532" y="408"/>
         </scene>
-        <!--Categorie-->
+        <!--Oefeningen View Controller-->
         <scene sceneID="8ms-aZ-sIv">
             <objects>
                 <viewController id="gfO-NB-3aJ" customClass="OefeningenViewController" customModule="MPT" customModuleProvider="target" sceneMemberID="viewController">
@@ -237,7 +237,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KOq-vk-EGi">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="z3H-xl-Z5B">
@@ -290,20 +290,26 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="eAR-Fn-rwM"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Categorie" id="j7A-sy-gSW">
-                        <barButtonItem key="backBarButtonItem" title="Terug" id="Qx4-h6-duW"/>
+                    <navigationItem key="navigationItem" id="yUr-k4-pNA">
+                        <barButtonItem key="leftBarButtonItem" title="Terug" id="JKU-xs-jM3">
+                            <connections>
+                                <segue destination="aMa-GI-Xwv" kind="presentation" id="y2N-RL-Idh"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="navigatieTitel" destination="yUr-k4-pNA" id="jE5-WO-XEP"/>
                         <outlet property="oefeningenCollectieView" destination="KOq-vk-EGi" id="tIO-Mv-cej"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jeo-DI-Ira" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="500.00000000000006" y="1027.9017857142858"/>
+            <point key="canvasLocation" x="235" y="1180"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FYf-u7-kut">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ood-ut-Yv3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="inF-1d-Wue" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vl0-aA-fyg">
@@ -315,9 +321,8 @@
                         <segue destination="gfO-NB-3aJ" kind="relationship" relationship="rootViewController" id="S3V-6r-Z5w"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ood-ut-Yv3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-410.14492753623193" y="1027.9017857142858"/>
+            <point key="canvasLocation" x="-533" y="1173"/>
         </scene>
     </scenes>
     <resources>
@@ -326,6 +331,6 @@
         <image name="mpt" width="368" height="368"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="arH-X4-C2g"/>
+        <segue reference="y2N-RL-Idh"/>
     </inferredMetricsTieBreakers>
 </document>
