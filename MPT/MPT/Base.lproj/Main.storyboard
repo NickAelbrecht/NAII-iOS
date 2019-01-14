@@ -175,7 +175,7 @@
                                         <connections>
                                             <outlet property="spierAfbeelding" destination="4Gz-qA-Cuu" id="wI7-uW-MuI"/>
                                             <outlet property="spierLabel" destination="cvg-WG-0Lf" id="ibo-Ik-j1j"/>
-                                            <segue destination="inF-1d-Wue" kind="presentation" id="Jhx-eB-AoI"/>
+                                            <segue destination="inF-1d-Wue" kind="presentation" identifier="naarOefeningen" id="Jhx-eB-AoI"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
