@@ -59,6 +59,7 @@ class SpierViewController: UIViewController, UICollectionViewDelegate, UICollect
             var categorie = ""
             let cell = sender as! CollectionViewCell
             categorie = cell.spierLabel.text!
+            print(categorie)
             oefeningenViewController.categorie = categorie
         }
     }

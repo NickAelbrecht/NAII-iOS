@@ -20,7 +20,7 @@ class OefeningenViewController: UIViewController, UICollectionViewDelegate, UICo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("categorienaam: " + categorie)
+       
       self.navigationItem.title = categorie
         
         if let opgeslagenOefeningen = Oefening.laadOefeningenVanDisk(){
@@ -46,6 +46,9 @@ class OefeningenViewController: UIViewController, UICollectionViewDelegate, UICo
         return cell
     }
     
+    @IBAction func terugKnop(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
     
 

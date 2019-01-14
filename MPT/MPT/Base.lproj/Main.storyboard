@@ -293,7 +293,7 @@
                     <navigationItem key="navigationItem" id="yUr-k4-pNA">
                         <barButtonItem key="leftBarButtonItem" title="Terug" id="JKU-xs-jM3">
                             <connections>
-                                <segue destination="aMa-GI-Xwv" kind="presentation" id="y2N-RL-Idh"/>
+                                <action selector="terugKnop:" destination="gfO-NB-3aJ" id="uUx-BA-qsP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -309,7 +309,6 @@
         <!--Navigation Controller-->
         <scene sceneID="FYf-u7-kut">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ood-ut-Yv3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="inF-1d-Wue" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vl0-aA-fyg">
@@ -321,6 +320,7 @@
                         <segue destination="gfO-NB-3aJ" kind="relationship" relationship="rootViewController" id="S3V-6r-Z5w"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ood-ut-Yv3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-533" y="1173"/>
         </scene>
@@ -330,7 +330,4 @@
         <image name="instagram_icon" width="37.5" height="37.5"/>
         <image name="mpt" width="368" height="368"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="y2N-RL-Idh"/>
-    </inferredMetricsTieBreakers>
 </document>
