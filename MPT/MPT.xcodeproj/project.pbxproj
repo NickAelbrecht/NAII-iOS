@@ -19,6 +19,7 @@
 		01C0B87821D3968800826292 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C0B87621D3968800826292 /* LaunchScreen.storyboard */; };
 		01C0B88321D3968900826292 /* MPTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C0B88221D3968900826292 /* MPTTests.swift */; };
 		01C0B88E21D3968900826292 /* MPTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C0B88D21D3968900826292 /* MPTUITests.swift */; };
+		01CA2E9A21ED22A50040203C /* OefeningToevoegenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA2E9921ED22A50040203C /* OefeningToevoegenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		01C0B88921D3968900826292 /* MPTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MPTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01C0B88D21D3968900826292 /* MPTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPTUITests.swift; sourceTree = "<group>"; };
 		01C0B88F21D3968900826292 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01CA2E9921ED22A50040203C /* OefeningToevoegenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OefeningToevoegenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				019BBBD221DFABA600C2B050 /* CollectionViewCell.swift */,
 				019BBBD421DFE8ED00C2B050 /* OefeningenCollectionViewCell.swift */,
 				019BBBD821DFE96100C2B050 /* OefeningenViewController.swift */,
+				01CA2E9921ED22A50040203C /* OefeningToevoegenViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				019BBBD321DFABA600C2B050 /* CollectionViewCell.swift in Sources */,
 				019BBBD521DFE8ED00C2B050 /* OefeningenCollectionViewCell.swift in Sources */,
 				0146635221DE0EB000ED28F5 /* HomeViewController.swift in Sources */,
+				01CA2E9A21ED22A50040203C /* OefeningToevoegenViewController.swift in Sources */,
 				019BBBDB21DFEBC900C2B050 /* Oefening.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -110,7 +110,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="quN-J2-5KZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="253.59999999999999" y="-304.4977511244378"/>
+            <point key="canvasLocation" x="262" y="-700"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ftn-5b-pMo">
@@ -130,7 +130,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J5l-py-oZ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-409" y="-304"/>
+            <point key="canvasLocation" x="-538" y="-700"/>
         </scene>
         <!--Spieren-->
         <scene sceneID="wlf-VC-gr4">
@@ -191,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l7j-bv-tdW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="252" y="408"/>
+            <point key="canvasLocation" x="-538" y="655"/>
         </scene>
         <!--Profiel-->
         <scene sceneID="XDT-6d-WAE">
@@ -207,7 +207,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PlN-XH-yIK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1163.768115942029" y="363.61607142857139"/>
+            <point key="canvasLocation" x="262" y="-3"/>
         </scene>
         <!--Spieren-->
         <scene sceneID="TGc-hQ-aNk">
@@ -226,7 +226,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lrp-bJ-30D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-532" y="408"/>
+            <point key="canvasLocation" x="-538" y="-3"/>
         </scene>
         <!--Oefeningen View Controller-->
         <scene sceneID="8ms-aZ-sIv">
@@ -296,6 +296,11 @@
                                 <action selector="terugKnop:" destination="gfO-NB-3aJ" id="uUx-BA-qsP"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="d6I-i1-C8K">
+                            <connections>
+                                <segue destination="q4S-cE-awa" kind="presentation" id="X8u-eZ-Sb9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="navigatieTitel" destination="yUr-k4-pNA" id="jE5-WO-XEP"/>
@@ -304,7 +309,79 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jeo-DI-Ira" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="235" y="1180"/>
+            <point key="canvasLocation" x="229" y="1333"/>
+        </scene>
+        <!--Oefening toevoegen-->
+        <scene sceneID="kHV-gf-AHy">
+            <objects>
+                <viewController id="w84-bc-itf" customClass="OefeningToevoegenViewController" customModule="MPT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GbM-VP-ttm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="97h-BN-Qwn">
+                                <rect key="frame" x="20" y="108" width="374" height="79"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Naam" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3JB-gx-bh2">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Naam oefening" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="meu-C0-Qzf">
+                                        <rect key="frame" x="0.0" y="49" width="374" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="rw5-6K-A2O">
+                                <rect key="frame" x="20" y="217" width="374" height="174"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6iD-99-LdA">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Details over de oefening" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4bh-63-ogn">
+                                        <rect key="frame" x="0.0" y="49" width="374" height="125"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="125" id="s72-gc-lDM"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rw5-6K-A2O" firstAttribute="top" secondItem="97h-BN-Qwn" secondAttribute="bottom" constant="30" id="Fmg-NF-LEe"/>
+                            <constraint firstItem="97h-BN-Qwn" firstAttribute="leading" secondItem="eUb-Ta-o9y" secondAttribute="leading" constant="20" id="Ji0-2L-Su5"/>
+                            <constraint firstItem="97h-BN-Qwn" firstAttribute="top" secondItem="eUb-Ta-o9y" secondAttribute="top" constant="20" id="UYf-br-9xZ"/>
+                            <constraint firstItem="rw5-6K-A2O" firstAttribute="leading" secondItem="eUb-Ta-o9y" secondAttribute="leading" constant="20" id="dJm-L8-GFT"/>
+                            <constraint firstItem="eUb-Ta-o9y" firstAttribute="trailing" secondItem="97h-BN-Qwn" secondAttribute="trailing" constant="20" id="nki-fZ-mXx"/>
+                            <constraint firstItem="eUb-Ta-o9y" firstAttribute="trailing" secondItem="rw5-6K-A2O" secondAttribute="trailing" constant="20" id="oIK-K2-IWs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eUb-Ta-o9y"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Oefening toevoegen" id="L6i-76-rqD">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Um7-Z2-bUn">
+                            <connections>
+                                <action selector="cancelKnop:" destination="w84-bc-itf" id="YwR-at-0Qb"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="h3d-CI-Emt"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G0c-KN-Tsc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="247.82608695652175" y="1995.5357142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FYf-u7-kut">
@@ -322,7 +399,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ood-ut-Yv3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-533" y="1173"/>
+            <point key="canvasLocation" x="-538" y="1325"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="76v-DI-GuZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q4S-cE-awa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="dd2-lN-HxO"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mTj-2h-vK7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="w84-bc-itf" kind="relationship" relationship="rootViewController" id="x4P-Gk-olP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AZ1-vo-zrg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-538" y="1996"/>
         </scene>
     </scenes>
     <resources>
