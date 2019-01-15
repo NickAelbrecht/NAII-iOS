@@ -8,11 +8,12 @@
 
 import Foundation
 import UIKit
+import RealmSwift
 
 struct Oefening:Codable {
-    var naam:String
-    var categorie:String
-    var details:String
+    public var naam:String
+    public var categorie:String
+    public var details:String
     
     
     static func laadOefeningenVanDisk() -> [Oefening]?{
@@ -50,4 +51,31 @@ struct Oefening:Codable {
         return oefeningen
     }
     
+    
 }
+
+public protocol Persistable {
+    associatedtype ManagedObject: RealmSwift.Object
+    init(managedObject: ManagedObject)
+    func managedObject() -> ManagedObject
+}
+
+extension Oefening: Persistable {
+    public init(managedObject: OefeningObject) {
+        naam = managedObject.naam
+        categorie = managedObject.categorie
+        details = managedObject.details
+    }
+    public func managedObject() -> OefeningObject {
+        let oef = OefeningObject()
+        oef.naam = naam
+        oef.categorie = categorie
+        oef.details = details
+        return oef
+    }
+}
+
+
+
+
+

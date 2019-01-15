@@ -8,12 +8,29 @@
 
 import Foundation
 import UIKit
+import RealmSwift
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var fbImage: UIImageView!
     
     
     @IBOutlet weak var instaImage: UIImageView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let realm = try! Realm()
+        print(Realm.Configuration.defaultConfiguration.fileURL)
+        
+        let oef = Oefening(naam: "press", categorie: "Borst", details: "fcgvhbjnk,l;")
+        let container = try! Container()
+        try! container.write{
+            tranaction in tranaction.add(oef, update: true)
+        }
+        
+        
+        
+    }
     
     
     @IBAction func instaButtonKlik(_ sender: Any) {
