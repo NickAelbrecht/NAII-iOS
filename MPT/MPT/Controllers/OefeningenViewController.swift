@@ -28,7 +28,9 @@ class OefeningenViewController: UIViewController, UICollectionViewDelegate, UICo
         }else{
             oefeningen = Oefening.laadStandaardOefeningen()
         }
+        if(categorie != "Alle"){
         oefeningen = oefeningen.filter{$0.categorie == categorie}
+        }
         
         oefeningenCollectieView.dataSource = self
         oefeningenCollectieView.delegate = self
