@@ -17,7 +17,18 @@ struct Oefening:Codable {
     
     
     static func laadOefeningenVanDisk() -> [Oefening]?{
-        return nil
+        var oefeningen:[Oefening] = []
+        let container = try! Container()
+        let oefeningenQuery = container.valuesZonderQuery(Oefening.self)
+        var oef:Oefening
+        for oefObj in oefeningenQuery.results {
+            oef = Oefening(naam: oefObj.naam, categorie: oefObj.categorie, details: oefObj.categorie)
+            oefeningen.append(oef)
+        }
+        
+        
+        return oefeningen;
+        
     }
     
     static func laadStandaardOefeningen() -> [Oefening]{
@@ -54,13 +65,9 @@ struct Oefening:Codable {
     
 }
 
-public protocol Persistable {
-    associatedtype ManagedObject: RealmSwift.Object
-    init(managedObject: ManagedObject)
-    func managedObject() -> ManagedObject
-}
 
 extension Oefening: Persistable {
+    
     public init(managedObject: OefeningObject) {
         naam = managedObject.naam
         categorie = managedObject.categorie
@@ -72,6 +79,43 @@ extension Oefening: Persistable {
         oef.categorie = categorie
         oef.details = details
         return oef
+    }
+}
+
+extension Oefening {
+    
+    public enum PropertyValue: PropertyValueType {
+        case naam(String)
+        case categorie(String)
+        
+        
+        public var propertyValuePair: PropertyValuePair {
+            switch self {
+            case .naam(let naam):
+                return ("naam", naam)
+            case .categorie(let cat):
+                return ("categorie", cat)
+                
+            }
+        }
+    }
+}
+
+extension Oefening {
+    
+    public enum Query: QueryType {
+        case oefeningNaam(String)
+        
+        public var predicate: NSPredicate? {
+            switch self {
+            case .oefeningNaam(let value):
+                return NSPredicate(format: "oefening.naam ==[c] %@", value)
+            }
+        }
+        
+        public var sortDescriptors: [SortDescriptor] {
+            return [SortDescriptor(keyPath: "naam")]
+        }
     }
 }
 

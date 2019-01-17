@@ -19,7 +19,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let realm = try! Realm()
+        _ = try! Realm()
         print(Realm.Configuration.defaultConfiguration.fileURL)
         
         let oef = Oefening(naam: "press", categorie: "Borst", details: "fcgvhbjnk,l;")
@@ -27,6 +27,7 @@ class HomeViewController: UIViewController {
         try! container.write{
             tranaction in tranaction.add(oef, update: true)
         }
+        
         
         
         
