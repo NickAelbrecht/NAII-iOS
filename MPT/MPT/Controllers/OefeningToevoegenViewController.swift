@@ -78,7 +78,7 @@ class OefeningToevoegenViewController: UIViewController {
     }
     
     func voegOefeningToe() {
-        let oef = Oefening(naam:oefeningNaam.text!, categorie:"", details:oefeningDetails.text!, moeilijkheidsgraad: Int(moeilijkheidsgraad.text!)!)
+        let oef = Oefening(naam:oefeningNaam.text!, categorie:self.categorie, details:oefeningDetails.text!, moeilijkheidsgraad: Int(moeilijkheidsgraad.text!)!)
         let container = try! Container()
         try! container.write{
             tranaction in tranaction.add(oef, update: true)
