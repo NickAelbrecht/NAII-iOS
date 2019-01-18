@@ -314,7 +314,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="d6I-i1-C8K">
                             <connections>
-                                <segue destination="q4S-cE-awa" kind="presentation" id="X8u-eZ-Sb9"/>
+                                <segue destination="q4S-cE-awa" kind="presentation" identifier="VoegOefeningToe" id="X8u-eZ-Sb9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -338,7 +338,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="97h-BN-Qwn">
                                 <rect key="frame" x="20" y="108" width="374" height="79"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Naam" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3JB-gx-bh2">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Naam*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3JB-gx-bh2">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
@@ -355,7 +355,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="rw5-6K-A2O">
                                 <rect key="frame" x="20" y="217" width="374" height="174"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6iD-99-LdA">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6iD-99-LdA">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
@@ -372,15 +372,38 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="OGB-CT-XbL">
+                                <rect key="frame" x="11" y="427" width="392" height="174"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moeilijkheidsgraad ( 1 - 5 )" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqF-Kx-nlq">
+                                        <rect key="frame" x="0.0" y="0.0" width="392" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Moeilijkheidsgraad van de oefening" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vpa-Mi-3tz">
+                                        <rect key="frame" x="0.0" y="49" width="392" height="125"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="125" id="ANJ-Rm-Th3"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="rw5-6K-A2O" firstAttribute="top" secondItem="97h-BN-Qwn" secondAttribute="bottom" constant="30" id="Fmg-NF-LEe"/>
                             <constraint firstItem="97h-BN-Qwn" firstAttribute="leading" secondItem="eUb-Ta-o9y" secondAttribute="leading" constant="20" id="Ji0-2L-Su5"/>
+                            <constraint firstItem="OGB-CT-XbL" firstAttribute="leading" secondItem="eUb-Ta-o9y" secondAttribute="leading" constant="2" id="SoC-FH-WxV"/>
                             <constraint firstItem="97h-BN-Qwn" firstAttribute="top" secondItem="eUb-Ta-o9y" secondAttribute="top" constant="20" id="UYf-br-9xZ"/>
+                            <constraint firstItem="eUb-Ta-o9y" firstAttribute="bottom" secondItem="OGB-CT-XbL" secondAttribute="bottom" constant="30" id="Wba-yc-dxN"/>
                             <constraint firstItem="rw5-6K-A2O" firstAttribute="leading" secondItem="eUb-Ta-o9y" secondAttribute="leading" constant="20" id="dJm-L8-GFT"/>
                             <constraint firstItem="eUb-Ta-o9y" firstAttribute="trailing" secondItem="97h-BN-Qwn" secondAttribute="trailing" constant="20" id="nki-fZ-mXx"/>
                             <constraint firstItem="eUb-Ta-o9y" firstAttribute="trailing" secondItem="rw5-6K-A2O" secondAttribute="trailing" constant="20" id="oIK-K2-IWs"/>
+                            <constraint firstItem="eUb-Ta-o9y" firstAttribute="trailing" secondItem="OGB-CT-XbL" secondAttribute="trailing" constant="20" id="xlu-c1-Oml"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eUb-Ta-o9y"/>
                     </view>
@@ -391,9 +414,18 @@
                                 <action selector="cancelKnop:" destination="w84-bc-itf" id="YwR-at-0Qb"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="h3d-CI-Emt"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="h3d-CI-Emt">
+                            <connections>
+                                <action selector="saveKnop:" destination="w84-bc-itf" id="ezh-4d-QQd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="moeilijkheidsgraad" destination="vpa-Mi-3tz" id="e6d-WI-qWo"/>
+                        <outlet property="oefeningDetails" destination="4bh-63-ogn" id="HEc-vF-awz"/>
+                        <outlet property="oefeningNaam" destination="meu-C0-Qzf" id="M8W-mM-jhk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G0c-KN-Tsc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

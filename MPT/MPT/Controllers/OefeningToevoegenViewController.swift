@@ -10,10 +10,18 @@ import Foundation
 import UIKit
 
 class OefeningToevoegenViewController: UIViewController {
-
+    @IBOutlet weak var oefeningNaam: UITextField!
+    @IBOutlet weak var oefeningDetails: UITextField!
+    @IBOutlet weak var moeilijkheidsgraad: UITextField!
+    
+    var categorie:String = ""
+    var naam:String = ""
+    var details:String = ""
+    var moeilijkheidsgraadCijfer:Int = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -22,14 +30,60 @@ class OefeningToevoegenViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func saveKnop(_ sender: Any) {
+        
     }
-    */
+    
+    func validate(){
+        do {
+            let naam = try self.oefeningNaam.validatedText(validationType: ValidatorType.naam)
+            let details = try self.oefeningDetails.validatedText(validationType: ValidatorType.details)
+            let moeilijkheidsgraad = try self.moeilijkheidsgraad.validatedText(validationType: ValidatorType.moeilijkheidsgraad)
+            if(naam && details && moeilijkheidsgraad){
+                voegOefeningToe()
+            }else{
+                showAlert(for: "Fouten in formulier, probeer opnieuw")
+                self.oefeningNaam.text = ""
+                self.oefeningDetails.text = ""
+                self.moeilijkheidsgraad.text = ""
+            }
+            
+        } catch(let error) {
+            showAlert(for: (error as! ValidatieError).message)
+        }
+    }
+    
+    func showAlert(for alert: String) {
+        let alertController = UIAlertController(title: nil, message: alert, preferredStyle: UIAlertController.Style.alert)
+        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(alertAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func voegOefeningToe() {
+        let oef = Oefening(naam:oefeningNaam.text!, categorie:"", details:oefeningDetails.text!, moeilijkheidsgraad: Int(moeilijkheidsgraad.text!)!)
+        let container = try! Container()
+        try! container.write{
+            tranaction in tranaction.add(oef, update: true)
+        }
+    }
+    
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
+}
 
+extension UITextField {
+    func validatedText(validationType: ValidatorType) throws -> Bool {
+        let validator = VaildatorFactory.validatorFor(type: validationType)
+        return try validator.validated(self.text!)
+    }
 }

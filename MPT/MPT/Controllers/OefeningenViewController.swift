@@ -10,8 +10,8 @@ import UIKit
 
 class OefeningenViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-        var oefeningen = [Oefening]()
-        var categorie:String = ""
+    var oefeningen = [Oefening]()
+    var categorie:String = ""
     
     
     @IBOutlet weak var navigatieTitel: UINavigationItem!
@@ -20,8 +20,8 @@ class OefeningenViewController: UIViewController, UICollectionViewDelegate, UICo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-      self.navigationItem.title = categorie
+        
+        self.navigationItem.title = categorie
         
         if let opgeslagenOefeningen = Oefening.laadOefeningenVanDisk(){
             oefeningen = opgeslagenOefeningen
@@ -29,12 +29,12 @@ class OefeningenViewController: UIViewController, UICollectionViewDelegate, UICo
             oefeningen = Oefening.laadStandaardOefeningen()
         }
         if(categorie != "Alle"){
-        oefeningen = oefeningen.filter{$0.categorie == categorie}
+            oefeningen = oefeningen.filter{$0.categorie == categorie}
         }
         
         oefeningenCollectieView.dataSource = self
         oefeningenCollectieView.delegate = self
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -54,15 +54,26 @@ class OefeningenViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        //print("prepare functie")
+        let nav = segue.destination as! UINavigationController
+        var categorie = self.categorie
+        if (segue.identifier == "VoegOefeningToe") {
+            let oefeningToevoegenController = nav.viewControllers[0] as! OefeningToevoegenViewController            
+            oefeningToevoegenController.categorie = categorie
+        }
     }
-    */
-
+    
+    
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
