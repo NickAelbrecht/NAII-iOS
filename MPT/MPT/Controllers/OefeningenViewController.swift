@@ -44,7 +44,7 @@ class OefeningenViewController: UIViewController, UICollectionViewDelegate, UICo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "oefeningCell", for: indexPath) as! OefeningenCollectionViewCell
-        cell.oefeningDetailLabel.text = oefeningen[indexPath.item].details
+        cell.moeilijkheidsgraadLabel.text = String(oefeningen[indexPath.item].moeilijkheidsgraad)
         cell.oefeningNaamLabel.text = oefeningen[indexPath.item].naam
         return cell
     }

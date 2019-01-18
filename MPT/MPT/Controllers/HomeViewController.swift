@@ -20,13 +20,13 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         _ = try! Realm()
-        print(Realm.Configuration.defaultConfiguration.fileURL)
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
         
-        let oef = Oefening(naam: "press", categorie: "Borst", details: "fcgvhbjnk,l;")
-        let container = try! Container()
-        try! container.write{
-            tranaction in tranaction.add(oef, update: true)
-        }
+        /* let oef = Oefening(naam: "press", categorie: "Borst", details: "fcgvhbjnk,l;", moeilijkheidsgraad : 2)
+         let container = try! Container()
+         try! container.write{
+         tranaction in tranaction.add(oef, update: true)
+         }*/
         
         
         

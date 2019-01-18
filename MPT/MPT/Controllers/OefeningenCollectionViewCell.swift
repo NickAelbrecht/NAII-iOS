@@ -10,6 +10,7 @@ import UIKit
 
 class OefeningenCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var oefeningNaamLabel: UILabel!
-    @IBOutlet weak var oefeningDetailLabel: UILabel!
+    @IBOutlet weak var moeilijkheidsgraadLabel: UILabel!
+    
     
 }

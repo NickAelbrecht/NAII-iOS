@@ -14,7 +14,7 @@ final class OefeningObject: Object {
     @objc dynamic var naam = ""
     @objc dynamic var categorie = ""
     @objc dynamic var details = ""
-    
+    @objc dynamic var moeilijkheidsgraad = 1
     override static func primaryKey() -> String? {
         return "naam"
     }

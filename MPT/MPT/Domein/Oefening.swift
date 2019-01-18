@@ -14,15 +14,17 @@ struct Oefening:Codable {
     public var naam:String
     public var categorie:String
     public var details:String
+    public var moeilijkheidsgraad:Int
     
     
     static func laadOefeningenVanDisk() -> [Oefening]?{
-        var oefeningen:[Oefening] = []
+        
+        var oefeningen:[Oefening] = laadStandaardOefeningen() //[]
         let container = try! Container()
         let oefeningenQuery = container.valuesZonderQuery(Oefening.self)
         var oef:Oefening
         for oefObj in oefeningenQuery.results {
-            oef = Oefening(naam: oefObj.naam, categorie: oefObj.categorie, details: oefObj.categorie)
+            oef = Oefening(naam: oefObj.naam, categorie: oefObj.categorie, details: oefObj.categorie, moeilijkheidsgraad:oefObj.moeilijkheidsgraad)
             oefeningen.append(oef)
         }
         
@@ -34,29 +36,29 @@ struct Oefening:Codable {
     static func laadStandaardOefeningen() -> [Oefening]{
         var oefeningen:[Oefening] = []
         
-        var oef = Oefening(naam: "Bench press", categorie: "Borst", details: "Uitleg over bench")
+        var oef = Oefening(naam: "Bench press", categorie: "Borst", details: "Uitleg over bench",moeilijkheidsgraad:5)
         oefeningen.append(oef)
         
-        oef = Oefening(naam: "Deadlift", categorie: "Rug", details: "Uitleg over deadlift")
+        oef = Oefening(naam: "Deadlift", categorie: "Rug", details: "Uitleg over deadlift",moeilijkheidsgraad:5)
         oefeningen.append(oef)
         
-        oef = Oefening(naam: "Squat", categorie: "Quadricep", details: "Uitleg over squat")
+        oef = Oefening(naam: "Squat", categorie: "Quadricep", details: "Uitleg over squat",moeilijkheidsgraad:5)
         oefeningen.append(oef)
         
-        oef = Oefening(naam: "Bicep curl", categorie: "Bicep", details: "Uitleg over bicep curl")
+        oef = Oefening(naam: "Bicep curl", categorie: "Bicep", details: "Uitleg over bicep curl",moeilijkheidsgraad:3)
         oefeningen.append(oef)
         
-        oef = Oefening(naam: "Tricep pushdown", categorie: "Tricep", details: "Uitleg over tricep pushdown")
+        oef = Oefening(naam: "Tricep pushdown", categorie: "Tricep", details: "Uitleg over tricep pushdown",moeilijkheidsgraad:3)
         oefeningen.append(oef)
         
         
-        oef = Oefening(naam: "Military press", categorie: "Schouder", details: "Uitleg over military press")
+        oef = Oefening(naam: "Military press", categorie: "Schouder", details: "Uitleg over military press",moeilijkheidsgraad:4)
         oefeningen.append(oef)
         
-        oef = Oefening(naam: "Hamstring curl", categorie: "Hamstring", details: "Uitleg over hamstring curl")
+        oef = Oefening(naam: "Hamstring curl", categorie: "Hamstring", details: "Uitleg over hamstring curl",moeilijkheidsgraad:2)
         oefeningen.append(oef)
         
-        oef = Oefening(naam: "Calves press", categorie: "Kuit", details: "Uitleg over calves press")
+        oef = Oefening(naam: "Calves press", categorie: "Kuit", details: "Uitleg over calves press",moeilijkheidsgraad:2)
         oefeningen.append(oef)
         
         return oefeningen
@@ -72,12 +74,14 @@ extension Oefening: Persistable {
         naam = managedObject.naam
         categorie = managedObject.categorie
         details = managedObject.details
+        moeilijkheidsgraad = managedObject.moeilijkheidsgraad
     }
     public func managedObject() -> OefeningObject {
         let oef = OefeningObject()
         oef.naam = naam
         oef.categorie = categorie
         oef.details = details
+        oef.moeilijkheidsgraad = moeilijkheidsgraad
         return oef
     }
 }
