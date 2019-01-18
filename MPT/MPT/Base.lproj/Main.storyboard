@@ -353,7 +353,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="rw5-6K-A2O">
-                                <rect key="frame" x="20" y="217" width="374" height="174"/>
+                                <rect key="frame" x="20" y="217" width="374" height="362"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6iD-99-LdA">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
@@ -362,7 +362,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Details over de oefening" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4bh-63-ogn">
-                                        <rect key="frame" x="0.0" y="49" width="374" height="125"/>
+                                        <rect key="frame" x="0.0" y="49" width="374" height="313"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="125" id="s72-gc-lDM"/>
                                         </constraints>
@@ -372,19 +372,19 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="OGB-CT-XbL">
-                                <rect key="frame" x="11" y="427" width="392" height="174"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="OGB-CT-XbL">
+                                <rect key="frame" x="20" y="609" width="374" height="174"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moeilijkheidsgraad ( 1 - 5 )" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqF-Kx-nlq">
-                                        <rect key="frame" x="0.0" y="0.0" width="392" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moeilijkheidsgraad ( 1 - 5 ) *" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqF-Kx-nlq">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Moeilijkheidsgraad van de oefening" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vpa-Mi-3tz">
-                                        <rect key="frame" x="0.0" y="49" width="392" height="125"/>
+                                        <rect key="frame" x="0.0" y="49" width="374" height="125"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="125" id="ANJ-Rm-Th3"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="ANJ-Rm-Th3"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -395,14 +395,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="OGB-CT-XbL" firstAttribute="top" secondItem="rw5-6K-A2O" secondAttribute="bottom" constant="30" id="EBh-xx-Z4f"/>
                             <constraint firstItem="rw5-6K-A2O" firstAttribute="top" secondItem="97h-BN-Qwn" secondAttribute="bottom" constant="30" id="Fmg-NF-LEe"/>
+                            <constraint firstItem="OGB-CT-XbL" firstAttribute="leading" secondItem="eUb-Ta-o9y" secondAttribute="leading" constant="20" id="Iha-bA-VnO"/>
                             <constraint firstItem="97h-BN-Qwn" firstAttribute="leading" secondItem="eUb-Ta-o9y" secondAttribute="leading" constant="20" id="Ji0-2L-Su5"/>
-                            <constraint firstItem="OGB-CT-XbL" firstAttribute="leading" secondItem="eUb-Ta-o9y" secondAttribute="leading" constant="2" id="SoC-FH-WxV"/>
                             <constraint firstItem="97h-BN-Qwn" firstAttribute="top" secondItem="eUb-Ta-o9y" secondAttribute="top" constant="20" id="UYf-br-9xZ"/>
                             <constraint firstItem="eUb-Ta-o9y" firstAttribute="bottom" secondItem="OGB-CT-XbL" secondAttribute="bottom" constant="30" id="Wba-yc-dxN"/>
+                            <constraint firstItem="OGB-CT-XbL" firstAttribute="top" secondItem="GbM-VP-ttm" secondAttribute="top" constant="609" id="Xp1-yJ-Ybw"/>
                             <constraint firstItem="rw5-6K-A2O" firstAttribute="leading" secondItem="eUb-Ta-o9y" secondAttribute="leading" constant="20" id="dJm-L8-GFT"/>
                             <constraint firstItem="eUb-Ta-o9y" firstAttribute="trailing" secondItem="97h-BN-Qwn" secondAttribute="trailing" constant="20" id="nki-fZ-mXx"/>
                             <constraint firstItem="eUb-Ta-o9y" firstAttribute="trailing" secondItem="rw5-6K-A2O" secondAttribute="trailing" constant="20" id="oIK-K2-IWs"/>
+                            <constraint firstItem="rw5-6K-A2O" firstAttribute="top" secondItem="eUb-Ta-o9y" secondAttribute="top" constant="129" id="txk-Pd-KBD"/>
                             <constraint firstItem="eUb-Ta-o9y" firstAttribute="trailing" secondItem="OGB-CT-XbL" secondAttribute="trailing" constant="20" id="xlu-c1-Oml"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eUb-Ta-o9y"/>

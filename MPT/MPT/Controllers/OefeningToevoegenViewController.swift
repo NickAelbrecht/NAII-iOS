@@ -31,14 +31,30 @@ class OefeningToevoegenViewController: UIViewController {
     }
     
     @IBAction func saveKnop(_ sender: Any) {
-        
+        /* guard let naam = oefeningNaam.text else {
+         showAlert(for: "Geen naam ingevuld")
+         return
+         }
+         
+         guard let details = oefeningDetails.text else {
+         showAlert(for: "Geen details ingevuld")
+         return
+         }
+         
+         guard let moeilijkheidsGraad = moeilijkheidsgraad.text else {
+         showAlert(for: "Geen moeilijkheidsgraad ingevuld")
+         return
+         }*/
+        validate()
     }
     
     func validate(){
         do {
+            
             let naam = try self.oefeningNaam.validatedText(validationType: ValidatorType.naam)
             let details = try self.oefeningDetails.validatedText(validationType: ValidatorType.details)
             let moeilijkheidsgraad = try self.moeilijkheidsgraad.validatedText(validationType: ValidatorType.moeilijkheidsgraad)
+            
             if(naam && details && moeilijkheidsgraad){
                 voegOefeningToe()
             }else{
@@ -47,6 +63,7 @@ class OefeningToevoegenViewController: UIViewController {
                 self.oefeningDetails.text = ""
                 self.moeilijkheidsgraad.text = ""
             }
+            
             
         } catch(let error) {
             showAlert(for: (error as! ValidatieError).message)
@@ -66,7 +83,15 @@ class OefeningToevoegenViewController: UIViewController {
         try! container.write{
             tranaction in tranaction.add(oef, update: true)
         }
+        
+        self.navigationController?.popViewController(animated: true)
+        
+        self.dismiss(animated: true, completion: nil)
+        
+        
     }
+    
+    
     
     
     /*
@@ -87,3 +112,5 @@ extension UITextField {
         return try validator.validated(self.text!)
     }
 }
+
+

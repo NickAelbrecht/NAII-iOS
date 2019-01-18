@@ -39,13 +39,15 @@ class DetailsValidatie:ValidatorConvertible {
 }
 class MoeilijkheidsgraadValidatie:ValidatorConvertible {
     func validated(_ value: String?) throws -> Bool {
-        if(Int(value!)! > 0 && Int(value!)! <= 5){
+        let val:Int? = Int(value ?? String(0))
+        if(!value!.isEmpty && val ?? 0 > 0 && val ?? 0 <= 5){
             return true
         }else{
             return false
         }
     }
 }
+
 
 protocol ValidatorConvertible {
     func validated(_ value: String?) throws -> Bool
