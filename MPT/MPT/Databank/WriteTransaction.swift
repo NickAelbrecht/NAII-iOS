@@ -11,6 +11,7 @@ import RealmSwift
 
 public final class WriteTransaction {
     private let realm: Realm
+    
     internal init(realm: Realm) {
         self.realm = realm
     }

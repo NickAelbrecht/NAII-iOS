@@ -31,20 +31,6 @@ class OefeningToevoegenViewController: UIViewController {
     }
     
     @IBAction func saveKnop(_ sender: Any) {
-        /* guard let naam = oefeningNaam.text else {
-         showAlert(for: "Geen naam ingevuld")
-         return
-         }
-         
-         guard let details = oefeningDetails.text else {
-         showAlert(for: "Geen details ingevuld")
-         return
-         }
-         
-         guard let moeilijkheidsGraad = moeilijkheidsgraad.text else {
-         showAlert(for: "Geen moeilijkheidsgraad ingevuld")
-         return
-         }*/
         validate()
     }
     
@@ -80,13 +66,13 @@ class OefeningToevoegenViewController: UIViewController {
     func voegOefeningToe() {
         let oef = Oefening(naam:oefeningNaam.text!, categorie:self.categorie, details:oefeningDetails.text!, moeilijkheidsgraad: Int(moeilijkheidsgraad.text!)!)
         let container = try! Container()
+        print("Toegevoegde oefening: " ,oef)
         try! container.write{
             tranaction in tranaction.add(oef, update: true)
         }
         
-        self.navigationController?.popViewController(animated: true)
-        
-        self.dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
         
         
     }

@@ -12,6 +12,7 @@ class OefeningenViewController: UIViewController, UICollectionViewDelegate, UICo
     
     var oefeningen = [Oefening]()
     var categorie:String = ""
+    var indexPath:IndexPath? = nil
     
     
     @IBOutlet weak var navigatieTitel: UINavigationItem!
@@ -34,7 +35,7 @@ class OefeningenViewController: UIViewController, UICollectionViewDelegate, UICo
         
         oefeningenCollectieView.dataSource = self
         oefeningenCollectieView.delegate = self
-        
+        self.oefeningenCollectieView.reloadData()
         
         // Do any additional setup after loading the view.
     }
@@ -51,7 +52,7 @@ class OefeningenViewController: UIViewController, UICollectionViewDelegate, UICo
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "oefeningCell", for: indexPath) as! OefeningenCollectionViewCell
         cell.moeilijkheidsgraadLabel.text = String(oefeningen[indexPath.item].moeilijkheidsgraad)
         cell.oefeningNaamLabel.text = oefeningen[indexPath.item].naam
-        
+        self.indexPath = indexPath
         //cell.deleteButton.addTarget(self, action: #selector(deleteOefening), for: UIControl.Event.touchUpInside)
         
         
@@ -59,21 +60,13 @@ class OefeningenViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     @IBAction func deleteButtonClicked(_ sender: UIButton) {
-        
+        print("Verwijderde oefening: " , oefeningen[indexPath!.item])
+        let oef = oefeningen[indexPath!.item]
         let container = try! Container()
-        try! container.delete(self.oefeningen[sender.tag])
-        self.oefeningen.remove(at: sender.tag)
-        self.oefeningenCollectieView.reloadData()
+        try! container.delete(oef: oef)
+        oefeningen.remove(at: indexPath!.item)
+        oefeningenCollectieView.reloadData()
     }
-    
-    /*  @objc func deleteOefening(sender:UIButton)  {
-     let index:Int = sender.layer.value(forKey: "oefeningCell") as! Int
-     oefeningen.remove(at: index)
-     oefeningenCollectieView.reloadData()
-     }*/
-    
-    
-    
     
     @IBAction func terugKnop(_ sender: Any) {
         dismiss(animated: true, completion: nil)

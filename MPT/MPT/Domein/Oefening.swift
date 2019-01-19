@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import RealmSwift
 
-struct Oefening:Codable {
+public struct Oefening {
     public var naam:String
     public var categorie:String
     public var details:String
@@ -24,8 +24,11 @@ struct Oefening:Codable {
         let oefeningenQuery = container.valuesZonderQuery(Oefening.self)
         var oef:Oefening
         for oefObj in oefeningenQuery.results {
-            oef = Oefening(naam: oefObj.naam, categorie: oefObj.categorie, details: oefObj.categorie, moeilijkheidsgraad:oefObj.moeilijkheidsgraad)
+            oef = Oefening(naam: oefObj.naam, categorie: oefObj.categorie, details: oefObj.details, moeilijkheidsgraad:oefObj.moeilijkheidsgraad)
             oefeningen.append(oef)
+            try! container.write{
+                tranaction in tranaction.add(oef, update: true)
+            }
         }
         
         
@@ -91,7 +94,8 @@ extension Oefening {
     public enum PropertyValue: PropertyValueType {
         case naam(String)
         case categorie(String)
-        
+        case details(String)
+        case moeilijkheidsgraad(Int)
         
         public var propertyValuePair: PropertyValuePair {
             switch self {
@@ -99,6 +103,10 @@ extension Oefening {
                 return ("naam", naam)
             case .categorie(let cat):
                 return ("categorie", cat)
+            case .details(let det):
+                return ("details", det)
+            case .moeilijkheidsgraad(let moeilijkheidsgraad):
+                return ("moeilijkheidsgraad", moeilijkheidsgraad)
                 
             }
         }

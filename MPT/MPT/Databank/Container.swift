@@ -30,11 +30,16 @@ public final class Container {
         }
     }
     
-    public func delete<T: Persistable>(_ value: T) throws{
-        let transaction = WriteTransaction(realm: realm)
-        try realm.write {
-            transaction.delete(value)
-        }
+    public func delete(oef:Oefening) throws {
+         if let oef = realm.objects(OefeningObject.self).first
+         {
+         try! realm.write {
+         realm.delete(oef)
+         }
+         
+         print(realm.objects(OefeningObject.self))
+         }
+       
     }
     
     
