@@ -31,15 +31,15 @@ public final class Container {
     }
     
     public func delete(oef:Oefening) throws {
-         if let oef = realm.objects(OefeningObject.self).first
-         {
-         try! realm.write {
-         realm.delete(oef)
-         }
-         
-         print(realm.objects(OefeningObject.self))
-         }
-       
+        if let oef = realm.objects(OefeningObject.self).first
+        {
+            try! realm.write {
+                realm.delete(oef)
+            }
+            
+            
+        }
+        
     }
     
     

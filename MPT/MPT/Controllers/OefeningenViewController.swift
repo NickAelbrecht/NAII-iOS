@@ -8,11 +8,13 @@
 
 import UIKit
 
-class OefeningenViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class OefeningenViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, MyCellDelegate {
+   
+    
     
     var oefeningen = [Oefening]()
     var categorie:String = ""
-    var indexPath:IndexPath? = nil
+    var indexPathVar:IndexPath? = nil
     
     
     @IBOutlet weak var navigatieTitel: UINavigationItem!
@@ -26,8 +28,10 @@ class OefeningenViewController: UIViewController, UICollectionViewDelegate, UICo
         
         if let opgeslagenOefeningen = Oefening.laadOefeningenVanDisk(){
             oefeningen = opgeslagenOefeningen
+//               print("Oefeningen van disk zogezegd", oefeningen)
         }else{
             oefeningen = Oefening.laadStandaardOefeningen()
+//            print("Oefeningen lokaal?", oefeningen)
         }
         if(categorie != "Alle"){
             oefeningen = oefeningen.filter{$0.categorie == categorie}
@@ -35,13 +39,13 @@ class OefeningenViewController: UIViewController, UICollectionViewDelegate, UICo
         
         oefeningenCollectieView.dataSource = self
         oefeningenCollectieView.delegate = self
-        self.oefeningenCollectieView.reloadData()
+        oefeningenCollectieView.reloadData()
         
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.oefeningenCollectieView.reloadData()
+        oefeningenCollectieView.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -52,16 +56,26 @@ class OefeningenViewController: UIViewController, UICollectionViewDelegate, UICo
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "oefeningCell", for: indexPath) as! OefeningenCollectionViewCell
         cell.moeilijkheidsgraadLabel.text = String(oefeningen[indexPath.item].moeilijkheidsgraad)
         cell.oefeningNaamLabel.text = oefeningen[indexPath.item].naam
-        self.indexPath = indexPath
-        //cell.deleteButton.addTarget(self, action: #selector(deleteOefening), for: UIControl.Event.touchUpInside)
-        
-        
+        cell.delegate = self
+        self.indexPathVar = indexPath
+        print("Indexpath: " , indexPath.item, "oefeningen indexpath: " , oefeningen[indexPath.item])
         return cell
     }
     
-    @IBAction func deleteButtonClicked(_ sender: UIButton) {
+   /* @IBAction func deleteButtonClicked(_ sender: UIButton) {
+        print("index path verwijderde" , indexPathVar!.item)
+        print("Verwijderde oefening: " , oefeningen[indexPathVar!.item])
+        let oef = oefeningen[indexPathVar!.item]
+        let container = try! Container()
+        try! container.delete(oef: oef)
+        oefeningen.remove(at: indexPathVar!.item)
+        oefeningenCollectieView.reloadData()
+    }*/
+    func btnCloseTapped(cell: OefeningenCollectionViewCell) {
+        let indexPath = self.oefeningenCollectieView.indexPath(for: cell)
+        print(indexPath!.item)
         print("Verwijderde oefening: " , oefeningen[indexPath!.item])
-        let oef = oefeningen[indexPath!.item]
+         let oef = oefeningen[indexPath!.item]
         let container = try! Container()
         try! container.delete(oef: oef)
         oefeningen.remove(at: indexPath!.item)
@@ -82,6 +96,7 @@ class OefeningenViewController: UIViewController, UICollectionViewDelegate, UICo
             oefeningToevoegenController.categorie = categorie
         }
     }
+    
     
     
     

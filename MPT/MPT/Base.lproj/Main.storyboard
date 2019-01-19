@@ -272,7 +272,7 @@
                                                         <color key="titleColor" red="1" green="0.34869424069999999" blue="0.2087409449" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="deleteButtonClicked:" destination="gfO-NB-3aJ" eventType="touchUpInside" id="KR8-VX-EWX"/>
+                                                        <action selector="btnCloseTapped:" destination="WBy-Zf-JBW" eventType="touchUpInside" id="l4S-eX-F0F"/>
                                                     </connections>
                                                 </button>
                                             </subviews>

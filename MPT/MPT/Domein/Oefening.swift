@@ -19,12 +19,12 @@ public struct Oefening {
     
     static func laadOefeningenVanDisk() -> [Oefening]?{
         
-        var oefeningen:[Oefening] = laadStandaardOefeningen() //[]
+        var oefeningen:[Oefening] = []
         let container = try! Container()
         let oefeningenQuery = container.valuesZonderQuery(Oefening.self)
-        var oef:Oefening
+        print("Oefeningenquery", oefeningenQuery)
         for oefObj in oefeningenQuery.results {
-            oef = Oefening(naam: oefObj.naam, categorie: oefObj.categorie, details: oefObj.details, moeilijkheidsgraad:oefObj.moeilijkheidsgraad)
+            var oef = Oefening(naam: oefObj.naam, categorie: oefObj.categorie, details: oefObj.details, moeilijkheidsgraad:oefObj.moeilijkheidsgraad)
             oefeningen.append(oef)
             try! container.write{
                 tranaction in tranaction.add(oef, update: true)
@@ -32,7 +32,18 @@ public struct Oefening {
         }
         
         
+        
+        
         return oefeningen;
+        
+    }
+    static func voegOefeningenEenKeerToe(){
+        let container = try! Container()
+        for oef in laadStandaardOefeningen(){
+            try! container.write{
+                tranaction in tranaction.add(oef, update: true)
+            }
+        }
         
     }
     

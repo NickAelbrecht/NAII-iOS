@@ -8,12 +8,24 @@
 
 import UIKit
 
+protocol MyCellDelegate: AnyObject {
+    func btnCloseTapped(cell: OefeningenCollectionViewCell)
+}
+
 class OefeningenCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var oefeningNaamLabel: UILabel!
     @IBOutlet weak var moeilijkheidsgraadLabel: UILabel!
     
-    @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet var deleteButton: UIButton!
     
+    weak var delegate: MyCellDelegate?
+    
+    @IBAction func btnCloseTapped(_ sender: Any) {
+//        print("cell tapped button close")
+        delegate?.btnCloseTapped(cell: self)
+    }
     
     
 }
+
+
