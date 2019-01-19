@@ -253,42 +253,45 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="OefNaam" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKJ-6a-fHE">
-                                                    <rect key="frame" x="16" y="42" width="218" height="24"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="moeilijkheidsgraad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6W-k5-pUF">
-                                                    <rect key="frame" x="230" y="42" width="164" height="24"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZF-m8-0kA">
-                                                    <rect key="frame" x="363" y="6" width="35" height="35"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Q6O-2v-U6Q">
+                                                    <rect key="frame" x="0.0" y="32" width="414" height="76"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" image="Webp.net-resizeimage">
-                                                        <color key="titleColor" red="1" green="0.34869424069999999" blue="0.2087409449" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="btnCloseTapped:" destination="WBy-Zf-JBW" eventType="touchUpInside" id="l4S-eX-F0F"/>
-                                                    </connections>
-                                                </button>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPA-Lx-qBZ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="107" height="42"/>
+                                                            <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="25"/>
+                                                            <state key="normal" title="OefNaam">
+                                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="btnOefeningNaam:" destination="WBy-Zf-JBW" eventType="touchUpInside" id="yvz-ho-Mq9"/>
+                                                                <segue destination="kcG-34-BCm" kind="presentation" identifier="OefeningDetail" id="Fj2-SM-Lem"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="moeilijkheidsgraad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6W-k5-pUF">
+                                                            <rect key="frame" x="117" y="0.0" width="202.5" height="42"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZF-m8-0kA">
+                                                            <rect key="frame" x="329.5" y="0.0" width="35" height="42"/>
+                                                            <state key="normal" image="Webp.net-resizeimage">
+                                                                <color key="titleColor" red="1" green="0.34869424069999999" blue="0.2087409449" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="btnCloseTapped:" destination="WBy-Zf-JBW" eventType="touchUpInside" id="l4S-eX-F0F"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="MKJ-6a-fHE" firstAttribute="baseline" secondItem="g6W-k5-pUF" secondAttribute="baseline" id="69q-MU-lyD"/>
-                                            <constraint firstItem="MKJ-6a-fHE" firstAttribute="centerY" secondItem="WBy-Zf-JBW" secondAttribute="centerY" id="Ksf-Hz-uX9"/>
-                                            <constraint firstItem="MKJ-6a-fHE" firstAttribute="leading" secondItem="WBy-Zf-JBW" secondAttribute="leadingMargin" constant="8" id="gwb-6T-6oG"/>
-                                            <constraint firstItem="g6W-k5-pUF" firstAttribute="leading" secondItem="MKJ-6a-fHE" secondAttribute="trailing" constant="8" symbolic="YES" id="qLp-Ag-JEO"/>
-                                            <constraint firstItem="g6W-k5-pUF" firstAttribute="trailing" secondItem="WBy-Zf-JBW" secondAttribute="trailingMargin" id="wPs-Jw-kRC"/>
-                                        </constraints>
                                         <connections>
                                             <outlet property="deleteButton" destination="vZF-m8-0kA" id="Z7d-tF-3ki"/>
                                             <outlet property="moeilijkheidsgraadLabel" destination="g6W-k5-pUF" id="yat-cw-ro0"/>
-                                            <outlet property="oefeningNaamLabel" destination="MKJ-6a-fHE" id="4xU-i6-cdu"/>
+                                            <outlet property="oefeningNaamButton" destination="xPA-Lx-qBZ" id="IgK-Fe-wPn"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -337,6 +340,78 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jeo-DI-Ira" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="228.98550724637684" y="1331.9196428571429"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="OGe-Dl-tLt">
+            <objects>
+                <viewController id="xLV-T4-N3z" customClass="OefeningDetailViewController" customModule="MPT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Ov-mn-cuG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oefening Naam" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXT-Ab-XgC">
+                                <rect key="frame" x="8" y="118" width="398" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Oefening Moeilijkheid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ql2-R7-hMj">
+                                <rect key="frame" x="8" y="377" width="398" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Oefening Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K3R-Rc-0LA">
+                                <rect key="frame" x="8" y="517" width="398" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="03l-mh-czE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Oefening Categorie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtW-Jf-jkM">
+                                <rect key="frame" x="8" y="240" width="398" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dXT-Ab-XgC" firstAttribute="leading" secondItem="sBR-yv-Umd" secondAttribute="leading" constant="8" id="1h2-Dc-bO7"/>
+                            <constraint firstItem="Ql2-R7-hMj" firstAttribute="top" secondItem="xtW-Jf-jkM" secondAttribute="bottom" constant="35" id="88q-Ht-erD"/>
+                            <constraint firstItem="K3R-Rc-0LA" firstAttribute="leading" secondItem="dXT-Ab-XgC" secondAttribute="leading" id="Kti-WU-nMr"/>
+                            <constraint firstItem="K3R-Rc-0LA" firstAttribute="leading" secondItem="xtW-Jf-jkM" secondAttribute="leading" id="NtP-u3-vYB"/>
+                            <constraint firstItem="sBR-yv-Umd" firstAttribute="trailing" secondItem="dXT-Ab-XgC" secondAttribute="trailing" constant="8" id="O9w-Ra-zm5"/>
+                            <constraint firstItem="dXT-Ab-XgC" firstAttribute="top" secondItem="sBR-yv-Umd" secondAttribute="top" constant="30" id="Pp6-y9-QjY"/>
+                            <constraint firstItem="K3R-Rc-0LA" firstAttribute="top" secondItem="Ql2-R7-hMj" secondAttribute="bottom" constant="35" id="cla-p6-6mT"/>
+                            <constraint firstItem="K3R-Rc-0LA" firstAttribute="trailing" secondItem="xtW-Jf-jkM" secondAttribute="trailing" id="d8D-6q-sq9"/>
+                            <constraint firstItem="xtW-Jf-jkM" firstAttribute="top" secondItem="dXT-Ab-XgC" secondAttribute="bottom" constant="50" id="dq4-OH-jwF"/>
+                            <constraint firstItem="K3R-Rc-0LA" firstAttribute="trailing" secondItem="dXT-Ab-XgC" secondAttribute="trailing" id="h1b-yG-d5u"/>
+                            <constraint firstItem="K3R-Rc-0LA" firstAttribute="trailing" secondItem="Ql2-R7-hMj" secondAttribute="trailing" id="mVE-Vq-uZx"/>
+                            <constraint firstItem="K3R-Rc-0LA" firstAttribute="leading" secondItem="Ql2-R7-hMj" secondAttribute="leading" id="rcj-LB-RxD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sBR-yv-Umd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="pPf-au-LHI">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="kAZ-JC-oML">
+                            <connections>
+                                <action selector="cancelKnop:" destination="xLV-T4-N3z" id="hDk-ve-9VP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="OefeningCategorieLabel" destination="xtW-Jf-jkM" id="awk-PL-wvQ"/>
+                        <outlet property="OefeningDetailsLabel" destination="K3R-Rc-0LA" id="Shv-rx-QD2"/>
+                        <outlet property="OefeningMoeilijkheidLabel" destination="Ql2-R7-hMj" id="5aZ-7J-FHt"/>
+                        <outlet property="OefeningNaamLabel" destination="dXT-Ab-XgC" id="5Gv-53-HNs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ff-M0-hRA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2435" y="1332"/>
         </scene>
         <!--Oefening toevoegen-->
         <scene sceneID="kHV-gf-AHy">
@@ -481,6 +556,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AZ1-vo-zrg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-538" y="1996"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="pgk-If-H7o">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kcG-34-BCm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="PFO-CI-SJh"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6wO-fD-2PG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xLV-T4-N3z" kind="relationship" relationship="rootViewController" id="IXk-zi-PSe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BLF-5x-idh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1564" y="1332"/>
         </scene>
     </scenes>
     <resources>

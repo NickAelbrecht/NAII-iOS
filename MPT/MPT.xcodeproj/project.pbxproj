@@ -10,6 +10,7 @@
 		011904D821F1DE65007939BC /* ValidatieError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011904D721F1DE65007939BC /* ValidatieError.swift */; };
 		0146635221DE0EB000ED28F5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146635121DE0EB000ED28F5 /* HomeViewController.swift */; };
 		016F642721F37ADF00944FC8 /* UICollectionViewCellIndexPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016F642621F37ADF00944FC8 /* UICollectionViewCellIndexPath.swift */; };
+		016F642921F3B53A00944FC8 /* OefeningDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016F642821F3B53A00944FC8 /* OefeningDetailViewController.swift */; };
 		019BBBD121DFA49700C2B050 /* SpierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BBBD021DFA49700C2B050 /* SpierViewController.swift */; };
 		019BBBD321DFABA600C2B050 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BBBD221DFABA600C2B050 /* CollectionViewCell.swift */; };
 		019BBBD521DFE8ED00C2B050 /* OefeningenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BBBD421DFE8ED00C2B050 /* OefeningenCollectionViewCell.swift */; };
@@ -54,6 +55,7 @@
 		011904D721F1DE65007939BC /* ValidatieError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatieError.swift; sourceTree = "<group>"; };
 		0146635121DE0EB000ED28F5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		016F642621F37ADF00944FC8 /* UICollectionViewCellIndexPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellIndexPath.swift; sourceTree = "<group>"; };
+		016F642821F3B53A00944FC8 /* OefeningDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OefeningDetailViewController.swift; sourceTree = "<group>"; };
 		019BBBD021DFA49700C2B050 /* SpierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpierViewController.swift; sourceTree = "<group>"; };
 		019BBBD221DFABA600C2B050 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		019BBBD421DFE8ED00C2B050 /* OefeningenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OefeningenCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				019BBBD421DFE8ED00C2B050 /* OefeningenCollectionViewCell.swift */,
 				019BBBD821DFE96100C2B050 /* OefeningenViewController.swift */,
 				01CA2E9921ED22A50040203C /* OefeningToevoegenViewController.swift */,
+				016F642821F3B53A00944FC8 /* OefeningDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				01C307AF21EE5DDC00155E3C /* OefeningObject.swift in Sources */,
 				0146635221DE0EB000ED28F5 /* HomeViewController.swift in Sources */,
 				01CA2E9A21ED22A50040203C /* OefeningToevoegenViewController.swift in Sources */,
+				016F642921F3B53A00944FC8 /* OefeningDetailViewController.swift in Sources */,
 				01CC4B5221EE4C7E00597772 /* formValidatie.swift in Sources */,
 				019BBBDB21DFEBC900C2B050 /* Oefening.swift in Sources */,
 				01BEF4E621F0C194000352F2 /* WriteTransaction.swift in Sources */,

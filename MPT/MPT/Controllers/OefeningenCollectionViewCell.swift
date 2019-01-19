@@ -10,11 +10,13 @@ import UIKit
 
 protocol MyCellDelegate: AnyObject {
     func btnCloseTapped(cell: OefeningenCollectionViewCell)
+    func btnOefeningNaam(cell: OefeningenCollectionViewCell)
 }
 
 class OefeningenCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var oefeningNaamLabel: UILabel!
+//    @IBOutlet weak var oefeningNaamLabel: UILabel!
     @IBOutlet weak var moeilijkheidsgraadLabel: UILabel!
+    @IBOutlet weak var oefeningNaamButton: UIButton!
     
     @IBOutlet var deleteButton: UIButton!
     
@@ -23,6 +25,10 @@ class OefeningenCollectionViewCell: UICollectionViewCell {
     @IBAction func btnCloseTapped(_ sender: Any) {
 //        print("cell tapped button close")
         delegate?.btnCloseTapped(cell: self)
+    }
+    
+    @IBAction func btnOefeningNaam(_ sender: Any) {
+        delegate?.btnOefeningNaam(cell: self)
     }
     
     
