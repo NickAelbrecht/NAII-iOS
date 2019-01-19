@@ -12,5 +12,8 @@ class OefeningenCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var oefeningNaamLabel: UILabel!
     @IBOutlet weak var moeilijkheidsgraadLabel: UILabel!
     
+    @IBOutlet weak var deleteButton: UIButton!
+    
+    
     
 }

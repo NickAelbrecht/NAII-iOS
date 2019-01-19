@@ -29,6 +29,15 @@ public final class Container {
             try block(transaction)
         }
     }
+    
+    public func delete<T: Persistable>(_ value: T) throws{
+        let transaction = WriteTransaction(realm: realm)
+        try realm.write {
+            transaction.delete(value)
+        }
+    }
+    
+    
     //    Oefening ophalen uit de databank
     public func values<T: Persistable> (_ type: T.Type, matching query: T.Query) -> FetchedResults<T> {
         var results = realm.objects(T.ManagedObject.self)
@@ -44,9 +53,6 @@ public final class Container {
     
     public func valuesZonderQuery<T: Persistable> (_ type: T.Type) -> FetchedResults<T> {
         let results = realm.objects(T.ManagedObject.self)
-        
-        
-        
         return FetchedResults(results: results)
     }
     

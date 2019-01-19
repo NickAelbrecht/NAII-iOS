@@ -236,8 +236,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KOq-vk-EGi">
-                                <rect key="frame" x="0.0" y="168" width="414" height="694"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KOq-vk-EGi">
+                                <rect key="frame" x="0.0" y="168" width="414" height="728"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="z3H-xl-Z5B">
                                     <size key="itemSize" width="414" height="108"/>
@@ -265,6 +265,16 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZF-m8-0kA">
+                                                    <rect key="frame" x="363" y="6" width="35" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" image="Webp.net-resizeimage">
+                                                        <color key="titleColor" red="1" green="0.34869424069999999" blue="0.2087409449" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="deleteButtonClicked:" destination="gfO-NB-3aJ" eventType="touchUpInside" id="KR8-VX-EWX"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -276,6 +286,7 @@
                                             <constraint firstItem="g6W-k5-pUF" firstAttribute="trailing" secondItem="WBy-Zf-JBW" secondAttribute="trailingMargin" id="wPs-Jw-kRC"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="deleteButton" destination="vZF-m8-0kA" id="Z7d-tF-3ki"/>
                                             <outlet property="moeilijkheidsgraadLabel" destination="g6W-k5-pUF" id="yat-cw-ro0"/>
                                             <outlet property="oefeningNaamLabel" destination="MKJ-6a-fHE" id="4xU-i6-cdu"/>
                                         </connections>
@@ -473,6 +484,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Webp.net-resizeimage" width="35" height="35"/>
         <image name="facebook_icon" width="37.5" height="37.5"/>
         <image name="instagram_icon" width="37.5" height="37.5"/>
         <image name="mpt" width="368" height="368"/>
