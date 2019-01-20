@@ -8,9 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		011904D821F1DE65007939BC /* ValidatieError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011904D721F1DE65007939BC /* ValidatieError.swift */; };
+		013AC16D21F47FB200E2A250 /* ProfielViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013AC16C21F47FB200E2A250 /* ProfielViewController.swift */; };
+		013AC16F21F48A3900E2A250 /* RegistrerenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013AC16E21F48A3900E2A250 /* RegistrerenViewController.swift */; };
+		013AC17121F48A4300E2A250 /* InloggenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013AC17021F48A4300E2A250 /* InloggenViewController.swift */; };
 		0146635221DE0EB000ED28F5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0146635121DE0EB000ED28F5 /* HomeViewController.swift */; };
 		016F642721F37ADF00944FC8 /* UICollectionViewCellIndexPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016F642621F37ADF00944FC8 /* UICollectionViewCellIndexPath.swift */; };
 		016F642921F3B53A00944FC8 /* OefeningDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016F642821F3B53A00944FC8 /* OefeningDetailViewController.swift */; };
+		01940C0D21F49163001AF09C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01940C0C21F49163001AF09C /* GoogleService-Info.plist */; };
 		019BBBD121DFA49700C2B050 /* SpierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BBBD021DFA49700C2B050 /* SpierViewController.swift */; };
 		019BBBD321DFABA600C2B050 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BBBD221DFABA600C2B050 /* CollectionViewCell.swift */; };
 		019BBBD521DFE8ED00C2B050 /* OefeningenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BBBD421DFE8ED00C2B050 /* OefeningenCollectionViewCell.swift */; };
@@ -53,9 +57,13 @@
 
 /* Begin PBXFileReference section */
 		011904D721F1DE65007939BC /* ValidatieError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatieError.swift; sourceTree = "<group>"; };
+		013AC16C21F47FB200E2A250 /* ProfielViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfielViewController.swift; sourceTree = "<group>"; };
+		013AC16E21F48A3900E2A250 /* RegistrerenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrerenViewController.swift; sourceTree = "<group>"; };
+		013AC17021F48A4300E2A250 /* InloggenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InloggenViewController.swift; sourceTree = "<group>"; };
 		0146635121DE0EB000ED28F5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		016F642621F37ADF00944FC8 /* UICollectionViewCellIndexPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellIndexPath.swift; sourceTree = "<group>"; };
 		016F642821F3B53A00944FC8 /* OefeningDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OefeningDetailViewController.swift; sourceTree = "<group>"; };
+		01940C0C21F49163001AF09C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		019BBBD021DFA49700C2B050 /* SpierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpierViewController.swift; sourceTree = "<group>"; };
 		019BBBD221DFABA600C2B050 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		019BBBD421DFE8ED00C2B050 /* OefeningenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OefeningenCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -129,6 +137,9 @@
 				019BBBD821DFE96100C2B050 /* OefeningenViewController.swift */,
 				01CA2E9921ED22A50040203C /* OefeningToevoegenViewController.swift */,
 				016F642821F3B53A00944FC8 /* OefeningDetailViewController.swift */,
+				013AC16C21F47FB200E2A250 /* ProfielViewController.swift */,
+				013AC16E21F48A3900E2A250 /* RegistrerenViewController.swift */,
+				013AC17021F48A4300E2A250 /* InloggenViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -184,6 +195,7 @@
 				01C0B87121D3968700826292 /* Main.storyboard */,
 				01C0B87421D3968800826292 /* Assets.xcassets */,
 				01C0B87621D3968800826292 /* LaunchScreen.storyboard */,
+				01940C0C21F49163001AF09C /* GoogleService-Info.plist */,
 				01C0B87921D3968800826292 /* Info.plist */,
 			);
 			path = MPT;
@@ -359,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01C0B87821D3968800826292 /* LaunchScreen.storyboard in Resources */,
+				01940C0D21F49163001AF09C /* GoogleService-Info.plist in Resources */,
 				01C0B87521D3968800826292 /* Assets.xcassets in Resources */,
 				01C0B87321D3968700826292 /* Main.storyboard in Resources */,
 			);
@@ -412,15 +425,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MPT/Pods-MPT-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -482,10 +503,12 @@
 				019BBBD921DFE96100C2B050 /* OefeningenViewController.swift in Sources */,
 				01BEF4E821F0C212000352F2 /* Persistable.swift in Sources */,
 				011904D821F1DE65007939BC /* ValidatieError.swift in Sources */,
+				013AC16D21F47FB200E2A250 /* ProfielViewController.swift in Sources */,
 				01C307B221EE5F7500155E3C /* Container.swift in Sources */,
 				01C0B86E21D3968700826292 /* AppDelegate.swift in Sources */,
 				019BBBD121DFA49700C2B050 /* SpierViewController.swift in Sources */,
 				019BBBD321DFABA600C2B050 /* CollectionViewCell.swift in Sources */,
+				013AC16F21F48A3900E2A250 /* RegistrerenViewController.swift in Sources */,
 				016F642721F37ADF00944FC8 /* UICollectionViewCellIndexPath.swift in Sources */,
 				019BBBD521DFE8ED00C2B050 /* OefeningenCollectionViewCell.swift in Sources */,
 				01C307AF21EE5DDC00155E3C /* OefeningObject.swift in Sources */,
@@ -493,6 +516,7 @@
 				01CA2E9A21ED22A50040203C /* OefeningToevoegenViewController.swift in Sources */,
 				016F642921F3B53A00944FC8 /* OefeningDetailViewController.swift in Sources */,
 				01CC4B5221EE4C7E00597772 /* formValidatie.swift in Sources */,
+				013AC17121F48A4300E2A250 /* InloggenViewController.swift in Sources */,
 				019BBBDB21DFEBC900C2B050 /* Oefening.swift in Sources */,
 				01BEF4E621F0C194000352F2 /* WriteTransaction.swift in Sources */,
 			);

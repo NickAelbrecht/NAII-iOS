@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class OefeningToevoegenViewController: UIViewController {
+class OefeningToevoegenViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var oefeningNaam: UITextField!
     @IBOutlet weak var oefeningDetails: UITextField!
     @IBOutlet weak var moeilijkheidsgraad: UITextField!
@@ -21,7 +21,10 @@ class OefeningToevoegenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hideKeyboardWhenTappedAround()
+        self.oefeningNaam.delegate = self
+        self.oefeningDetails.delegate = self
+        self.moeilijkheidsgraad.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -76,6 +79,12 @@ class OefeningToevoegenViewController: UIViewController {
         
         
     }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
+    
     
     
     

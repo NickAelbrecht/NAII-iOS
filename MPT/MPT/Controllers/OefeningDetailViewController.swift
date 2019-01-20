@@ -20,6 +20,7 @@ class OefeningDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         OefeningNaamLabel.text = oefening?.naam
+        OefeningDetailsLabel.sizeToFit()
         OefeningDetailsLabel.text = oefening?.details
         OefeningCategorieLabel.text = oefening?.categorie
         OefeningMoeilijkheidLabel.text = String(oefening!.moeilijkheidsgraad)

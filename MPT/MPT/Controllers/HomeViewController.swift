@@ -58,12 +58,18 @@ class HomeViewController: UIViewController {
             UIApplication.shared.open(NSURL(string: "https://www.facebook.com/Mergan.Personal.Training/")! as URL, options: [:], completionHandler: nil)
         }
     }
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
     
-    
-    
-    
-   
-    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
 
 
