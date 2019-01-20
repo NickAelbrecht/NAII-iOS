@@ -14,6 +14,7 @@ class ProfielViewController: UIViewController {
     @IBOutlet weak var inloggenButton: UIButton!
     @IBOutlet weak var uitloggenButton: UIButton!
     @IBOutlet weak var userEmail: UILabel!
+    @IBOutlet weak var wachtwoordVergetenButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,8 @@ class ProfielViewController: UIViewController {
         
         registrerenButton.layer.cornerRadius = 4
         inloggenButton.layer.cornerRadius = 4
+        uitloggenButton.layer.cornerRadius = 4
+        wachtwoordVergetenButton.layer.cornerRadius = 4
         if self.controleerUserIngelogd(){
             registrerenButton.isEnabled = false
             registrerenButton.backgroundColor = UIColor.black
@@ -33,6 +36,9 @@ class ProfielViewController: UIViewController {
             inloggenButton.isEnabled = false
             inloggenButton.backgroundColor = UIColor.black
             inloggenButton.setTitleColor(UIColor.gray, for: UIControl.State.disabled)
+            wachtwoordVergetenButton.isEnabled = false
+            wachtwoordVergetenButton.backgroundColor = UIColor.black
+            wachtwoordVergetenButton.setTitleColor(UIColor.gray, for: UIControl.State.disabled)
             uitloggenButton.isEnabled = true
             uitloggenButton.backgroundColor = #colorLiteral(red: 0.1137, green: 0.4392, blue: 0.9843, alpha: 1)
             userEmail.text = Auth.auth().currentUser?.email
@@ -51,7 +57,10 @@ class ProfielViewController: UIViewController {
     
     @IBAction func LogUit(_ sender: Any) {
         try! Auth.auth().signOut()
-        self.dismiss(animated: true, completion: nil)
+       // self.dismiss(animated: true, completion: nil)
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "HomeViewController") as! UITabBarController
+        self.present(newViewController, animated: true, completion: nil)
     }
     
     @IBAction func wachtwoordVergetenKnop(_ sender: Any) {

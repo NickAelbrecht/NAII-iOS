@@ -115,7 +115,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="ftn-5b-pMo">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="LoG-gO-DtW" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomeViewController" automaticallyAdjustsScrollViewInsets="NO" id="LoG-gO-DtW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NdL-jh-rnF">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -316,6 +316,7 @@
                         <outlet property="registrerenButton" destination="uzN-ui-Q5l" id="jq7-jX-OX9"/>
                         <outlet property="uitloggenButton" destination="ATC-6A-31m" id="nB3-ze-1KT"/>
                         <outlet property="userEmail" destination="BYA-Hg-1Wr" id="ot9-iy-osF"/>
+                        <outlet property="wachtwoordVergetenButton" destination="UPS-Bu-eLC" id="Eci-s3-mrR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PlN-XH-yIK" userLabel="First Responder" sceneMemberID="firstResponder"/>
