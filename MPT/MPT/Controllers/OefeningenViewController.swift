@@ -45,6 +45,7 @@ class OefeningenViewController: UIViewController, UICollectionViewDelegate, UICo
         if !self.controleerUserIngelogd() {
             self.navigationItem.rightBarButtonItem!.isEnabled = false
         }
+        oefeningenCollectieView.reloadData()
         // Do any additional setup after loading the view.
     }
     

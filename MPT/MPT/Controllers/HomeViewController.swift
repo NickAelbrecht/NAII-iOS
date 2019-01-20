@@ -76,7 +76,7 @@ extension UIViewController {
         let user = Auth.auth().currentUser;
         if ((user) != nil) {
             // User is signed in.
-            print("user:", user)
+            print("user:", user!)
             return true
             
         } else {

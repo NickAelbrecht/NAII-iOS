@@ -17,6 +17,7 @@ public final class WriteTransaction {
     }
     public func add<T: Persistable>(_ value: T, update: Bool) {
         realm.add(value.managedObject(), update: update)
+        realm.refresh()
     }
     
     public func add<T: Sequence>(_ values: T, update: Bool = false) where T.Iterator.Element: Persistable {
@@ -25,6 +26,7 @@ public final class WriteTransaction {
     
     public func delete<T: Persistable>(_ value: T) {
         realm.delete(value.managedObject())
+        realm.refresh()
     }
     
     public func delete<T: Sequence>(_ values: T) where T.Iterator.Element: Persistable {

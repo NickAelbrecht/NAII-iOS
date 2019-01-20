@@ -24,7 +24,7 @@ public struct Oefening {
         let oefeningenQuery = container.valuesZonderQuery(Oefening.self)
         print("Oefeningenquery", oefeningenQuery)
         for oefObj in oefeningenQuery.results {
-            var oef = Oefening(naam: oefObj.naam, categorie: oefObj.categorie, details: oefObj.details, moeilijkheidsgraad:oefObj.moeilijkheidsgraad)
+            let oef = Oefening(naam: oefObj.naam, categorie: oefObj.categorie, details: oefObj.details, moeilijkheidsgraad:oefObj.moeilijkheidsgraad)
             oefeningen.append(oef)
             try! container.write{
                 tranaction in tranaction.add(oef, update: true)
