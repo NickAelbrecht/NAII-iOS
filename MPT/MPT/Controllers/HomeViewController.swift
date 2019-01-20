@@ -9,10 +9,11 @@
 import Foundation
 import UIKit
 import RealmSwift
+import Firebase
+import FirebaseAuth
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var fbImage: UIImageView!
-    
     
     @IBOutlet weak var instaImage: UIImageView!
     
@@ -69,6 +70,18 @@ extension UIViewController {
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
+    }
+    
+    func controleerUserIngelogd() -> Bool{
+        let user = Auth.auth().currentUser;
+        if ((user) != nil) {
+            // User is signed in.
+            print("user:", user)
+            return true
+            
+        } else {
+           return false
+        }
     }
 }
 

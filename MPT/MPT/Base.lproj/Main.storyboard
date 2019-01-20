@@ -202,14 +202,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzN-ui-Q5l">
-                                <rect key="frame" x="100" y="488" width="214" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="100" y="508" width="214" height="50"/>
+                                <color key="backgroundColor" name="controlAccentColor" catalog="System" colorSpace="catalog"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="TmL-kH-pbi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Registreren">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="agb-sL-141" kind="presentation" id="3dm-4F-45v"/>
@@ -225,24 +228,85 @@
                                 <state key="normal" title="Inloggen">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="8nR-Vw-zdb" kind="presentation" id="fTd-Gi-Kdd"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mpt" translatesAutoresizingMaskIntoConstraints="NO" id="dl2-gQ-N97">
-                                <rect key="frame" x="23" y="52" width="368" height="368"/>
+                                <rect key="frame" x="23" y="52" width="368" height="387"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATC-6A-31m">
+                                <rect key="frame" x="100" y="668" width="214" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="76c-9g-0zV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Uitloggen">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="LogUit:" destination="J6W-4G-ZTg" eventType="touchUpInside" id="INu-WN-ukW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gebruiker: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LW4-o2-5RJ">
+                                <rect key="frame" x="75" y="454" width="96" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYA-Hg-1Wr">
+                                <rect key="frame" x="251" y="454" width="38" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPS-Bu-eLC">
+                                <rect key="frame" x="100" y="748" width="214" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="I1V-Ym-nlU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Wachtwoord Vergeten">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="wachtwoordVergetenKnop:" destination="J6W-4G-ZTg" eventType="touchUpInside" id="Bzl-oN-X38"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vBO-r1-eOe" firstAttribute="bottom" secondItem="vLB-2z-A6Z" secondAttribute="bottom" constant="175" id="0f3-IU-0Sm"/>
+                            <constraint firstItem="uzN-ui-Q5l" firstAttribute="top" secondItem="LW4-o2-5RJ" secondAttribute="bottom" constant="30" id="1yi-ut-yDv"/>
+                            <constraint firstItem="ATC-6A-31m" firstAttribute="leading" secondItem="vLB-2z-A6Z" secondAttribute="leading" id="4qU-TN-Kze"/>
+                            <constraint firstItem="ATC-6A-31m" firstAttribute="trailing" secondItem="vLB-2z-A6Z" secondAttribute="trailing" id="7Rc-UC-9QG"/>
+                            <constraint firstItem="LW4-o2-5RJ" firstAttribute="leading" secondItem="vBO-r1-eOe" secondAttribute="leading" constant="75" id="8EO-he-78F"/>
                             <constraint firstItem="dl2-gQ-N97" firstAttribute="centerX" secondItem="uzN-ui-Q5l" secondAttribute="centerX" id="Bkk-0p-bqk"/>
                             <constraint firstItem="vBO-r1-eOe" firstAttribute="trailing" secondItem="vLB-2z-A6Z" secondAttribute="trailing" constant="100" id="Chc-TQ-O6y"/>
                             <constraint firstItem="uzN-ui-Q5l" firstAttribute="leading" secondItem="vBO-r1-eOe" secondAttribute="leading" constant="100" id="ESW-gl-eKN"/>
-                            <constraint firstItem="vLB-2z-A6Z" firstAttribute="top" secondItem="uzN-ui-Q5l" secondAttribute="bottom" constant="50" id="YM3-XY-FbM"/>
+                            <constraint firstItem="LW4-o2-5RJ" firstAttribute="top" secondItem="dl2-gQ-N97" secondAttribute="bottom" constant="15" id="UGU-j4-OVb"/>
+                            <constraint firstItem="UPS-Bu-eLC" firstAttribute="trailing" secondItem="ATC-6A-31m" secondAttribute="trailing" id="a96-zL-9SL"/>
+                            <constraint firstItem="uzN-ui-Q5l" firstAttribute="top" secondItem="BYA-Hg-1Wr" secondAttribute="bottom" constant="30" id="ag5-gz-NTQ"/>
+                            <constraint firstItem="BYA-Hg-1Wr" firstAttribute="top" secondItem="dl2-gQ-N97" secondAttribute="bottom" constant="15" id="bPm-R1-TTP"/>
+                            <constraint firstItem="ATC-6A-31m" firstAttribute="top" secondItem="vLB-2z-A6Z" secondAttribute="bottom" constant="30" id="caA-tK-owD"/>
                             <constraint firstItem="vLB-2z-A6Z" firstAttribute="leading" secondItem="vBO-r1-eOe" secondAttribute="leading" constant="100" id="e6S-kg-cnv"/>
+                            <constraint firstItem="UPS-Bu-eLC" firstAttribute="top" secondItem="ATC-6A-31m" secondAttribute="bottom" constant="30" id="eR4-rZ-Lt3"/>
                             <constraint firstItem="vBO-r1-eOe" firstAttribute="trailing" secondItem="uzN-ui-Q5l" secondAttribute="trailing" constant="100" id="lCD-Bz-8AX"/>
+                            <constraint firstItem="BYA-Hg-1Wr" firstAttribute="leading" secondItem="LW4-o2-5RJ" secondAttribute="trailing" constant="80" id="lgV-oe-ENZ"/>
+                            <constraint firstItem="UPS-Bu-eLC" firstAttribute="leading" secondItem="ATC-6A-31m" secondAttribute="leading" id="orU-z4-jmL"/>
                             <constraint firstItem="dl2-gQ-N97" firstAttribute="top" secondItem="vBO-r1-eOe" secondAttribute="top" constant="8" id="xMZ-p3-5Lr"/>
+                            <constraint firstItem="vLB-2z-A6Z" firstAttribute="top" secondItem="uzN-ui-Q5l" secondAttribute="bottom" constant="30" id="zbx-np-cKw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vBO-r1-eOe"/>
                     </view>
@@ -250,6 +314,8 @@
                     <connections>
                         <outlet property="inloggenButton" destination="vLB-2z-A6Z" id="JZ7-XA-gAx"/>
                         <outlet property="registrerenButton" destination="uzN-ui-Q5l" id="jq7-jX-OX9"/>
+                        <outlet property="uitloggenButton" destination="ATC-6A-31m" id="nB3-ze-1KT"/>
+                        <outlet property="userEmail" destination="BYA-Hg-1Wr" id="ot9-iy-osF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PlN-XH-yIK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -286,7 +352,7 @@
                                 <rect key="frame" x="100" y="636" width="214" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wachtwoord bevestigen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJI-RU-leR">
                                 <rect key="frame" x="100" y="696" width="214" height="21"/>
@@ -298,7 +364,7 @@
                                 <rect key="frame" x="100" y="737" width="214" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mpt" translatesAutoresizingMaskIntoConstraints="NO" id="9dg-MW-VvT">
                                 <rect key="frame" x="26" y="88" width="368" height="368"/>
@@ -487,6 +553,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="navigatieTitel" destination="yUr-k4-pNA" id="jE5-WO-XEP"/>
+                        <outlet property="oefeningToevoegenKnop" destination="d6I-i1-C8K" id="mWh-es-MD4"/>
                         <outlet property="oefeningenCollectieView" destination="KOq-vk-EGi" id="tIO-Mv-cej"/>
                     </connections>
                 </viewController>
@@ -760,7 +827,7 @@
                                 <rect key="frame" x="100" y="706" width="214" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mpt" translatesAutoresizingMaskIntoConstraints="NO" id="4ra-Rx-zkc">
                                 <rect key="frame" x="20" y="88" width="374" height="368"/>

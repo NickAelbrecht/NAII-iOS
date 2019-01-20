@@ -7,12 +7,11 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
 
 class OefeningenViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, MyCellDelegate {
-    
-    
-    
-    
+    @IBOutlet weak var oefeningToevoegenKnop: UIBarButtonItem!
     
     var oefeningen = [Oefening]()
     var categorie:String = ""
@@ -43,7 +42,9 @@ class OefeningenViewController: UIViewController, UICollectionViewDelegate, UICo
         oefeningenCollectieView.dataSource = self
         oefeningenCollectieView.delegate = self
         oefeningenCollectieView.reloadData()
-        
+        if !self.controleerUserIngelogd() {
+            self.navigationItem.rightBarButtonItem!.isEnabled = false
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -67,15 +68,7 @@ class OefeningenViewController: UIViewController, UICollectionViewDelegate, UICo
         return cell
     }
     
-    /* @IBAction func deleteButtonClicked(_ sender: UIButton) {
-     print("index path verwijderde" , indexPathVar!.item)
-     print("Verwijderde oefening: " , oefeningen[indexPathVar!.item])
-     let oef = oefeningen[indexPathVar!.item]
-     let container = try! Container()
-     try! container.delete(oef: oef)
-     oefeningen.remove(at: indexPathVar!.item)
-     oefeningenCollectieView.reloadData()
-     }*/
+    
     func btnCloseTapped(cell: OefeningenCollectionViewCell) {
         let indexPath = self.oefeningenCollectieView.indexPath(for: cell)
         print(indexPath!.item)
@@ -101,7 +94,7 @@ class OefeningenViewController: UIViewController, UICollectionViewDelegate, UICo
         //print("prepare functie")
         let nav = segue.destination as! UINavigationController
         let categorie = self.categorie
-//        print("Viewcontrollers", nav.viewControllers[0] as! OefeningDetailViewController)
+        //        print("Viewcontrollers", nav.viewControllers[0] as! OefeningDetailViewController)
         
         
         if (segue.identifier == "VoegOefeningToe") {
@@ -114,6 +107,8 @@ class OefeningenViewController: UIViewController, UICollectionViewDelegate, UICo
                 
         }
     }
+    
+    
     
     
     
